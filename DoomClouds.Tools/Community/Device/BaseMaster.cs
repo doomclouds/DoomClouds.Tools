@@ -21,11 +21,11 @@ namespace DoomClouds.Tools.Community.Device
         {
             StreamResource.Write(message.Datas, 0, message.Datas.Length);
             string recStr = "";
-            for (int i = 0; i < message.ReadBytes; i++)
+            for (int i = 0; i < message.Datas.Length; i++)
             {
                 recStr = recStr + string.Format("{0:x2}", message.Datas[i]) + " ";
             }
-            LogHelper.Default.Debug("TX:" + DateTime.Now.ToString("HH:mm:ss:fff ") + recStr);
+            LogHelper.Default.Debug("TX:" + recStr);
         }
 
         public abstract void InitTimeout();

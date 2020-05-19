@@ -38,6 +38,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\..\Company\幻彩互动墙\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Company\GoMachine\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\..\..\Company\幻彩互动墙\packages\NLog.4.7.0\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -73,6 +76,7 @@
     <Compile Include="Community\Message\BaseMessage.cs" />
     <Compile Include="Community\Utility\DisposableUtility.cs" />
     <Compile Include="Helpers\Autofac\AutofacHelper.cs" />
+    <Compile Include="Helpers\Http\HttpClientHelper.cs" />
     <Compile Include="Helpers\Log\LogHelper.cs" />
     <Compile Include="Logging\ILoggerE.cs" />
     <Compile Include="Logging\LoggerE.cs" />
@@ -88,5 +92,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

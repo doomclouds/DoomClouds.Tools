@@ -54,10 +54,11 @@ namespace DoomClouds.Tools.Community
 
                         message.Buffer = buffer;
                         result = BitConverter.ToString(buffer).Replace("-", " ");
-                        LogHelper.Default.Debug("RX:" + DateTime.Now.ToString("HH:mm:ss:fff ") + BitConverter.ToString(buffer).Replace("-", " "));
+                        LogHelper.Default.Debug("RX:" + BitConverter.ToString(buffer).Replace("-", " "));
                     }
-                    catch (Exception)
+                    catch (Exception exception)
                     {
+                        LogHelper.Default.Error($"{exception.Message};{exception.StackTrace}");
                         times--;
                         continue;
                     }
